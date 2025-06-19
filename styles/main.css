@@ -1,12 +1,16 @@
 <style>
-    .subscribe-button {
-      background-color: rgb(200, 0, 0);
-      color: white
-      border: none;
-      height: 35px;
-      width: 105px;
-      border-radius: 2px;
-      cursor: pointer;
-    }
-  </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      body {
+        background: darkslategray;
+        font-family: 'Roboto';
+        font-size: 22px;
+      }
+      h1 {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+      ul {
+        color: goldenrod;
+      }
+    </style>
