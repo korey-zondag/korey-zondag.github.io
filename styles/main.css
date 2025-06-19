@@ -1,13 +1,15 @@
 body {
-  background: darkslategray;
+  background: black;
   font-family: 'Roboto';
   font-size: 22px;
 }
 h1 {
   color: white;
+  font-size: 20px;
 }
 p {
   color: white;
+  font-size: 14px;
 }
 ul {
   color: goldenrod;
