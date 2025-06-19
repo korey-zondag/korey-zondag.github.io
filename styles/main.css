@@ -1,16 +1,14 @@
-<style>
-      body {
-        background: darkslategray;
-        font-family: 'Roboto';
-        font-size: 22px;
-      }
-      h1 {
-        color: white;
-      }
-      p {
-        color: white;
-      }
-      ul {
-        color: goldenrod;
-      }
-    </style>
+body {
+  background: darkslategray;
+  font-family: 'Roboto';
+  font-size: 22px;
+}
+h1 {
+  color: white;
+}
+p {
+  color: white;
+}
+ul {
+  color: goldenrod;
+}
