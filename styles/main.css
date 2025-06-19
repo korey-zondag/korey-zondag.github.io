@@ -1,16 +1,64 @@
 body {
+  margin: 0;
+  padding: 0;
   background: black;
   font-family: 'Roboto';
-  font-size: 22px;
+  color: white;
 }
 h1 {
   color: white;
-  font-size: 20px;
+  font-size: 50px;
+  margin: 10px;
+  padding: 10px;
+}
+h2 {
+  color: white;
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px;
+}
+section {
+  margin: 20px;
+  padding: 20px;
 }
 p {
   color: white;
-  font-size: 14px;
+  font-size: 18px;
 }
 ul {
+  font-size: 20px;
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+  margin-right: 50px;
+}
+.blog-post-2 {
+  color: plum;
+}
+.blog-post-3 {
+  color: aquamarine;
+}
+#cat-talk {
+  text-align: center;
   color: goldenrod;
+}
+footer {
+  margin: 10px;
+  padding: 10px;
+}
+@media only screen and (min-width: 920px) {
+  .container {
+    min-width: 920px;
+  }
+}
+@media only screen and (max-width: 919px) {
+  .container {
+    max-width: 919px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container {
+    max-width: 400px;
+  }
 }
