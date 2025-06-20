@@ -18,12 +18,14 @@ body {
 a,
 a:link,
 a:visited,
-a:hover,
 a:focus,
-a:hover,
 a:active {
   text-decoration: none;
   color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: goldenrod;
 }
 h1 {
   color: goldenrod;
@@ -111,15 +113,10 @@ p {
   position: absolute;
   left: 1600px;
 }
-.blog-post-2 {
-  color: plum;
-}
-.blog-post-3 {
-  color: aquamarine;
-}
-#cat-talk {
-  text-align: center;
-  color: goldenrod;
+#cat-button {
+  font-size: 30px;
+  margin: 20px;
+  padding: 20px;
 }
 footer {
   background-color: rgb(1, 1, 31);
