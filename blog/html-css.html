@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Korey's Journey</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <ul class="nav-bar">
+          <li class="nav-bar"><a href="index.html">Home</a></li>
+          <li class="nav-bar"><a href="about-me.html">About Me</a></li>
+          <li class="nav-bar"><a href="blogs.html">Blogs</a></li>
+          <li class="nav-bar">
+            <a href="links-to-other-work.html">Links to Other Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1>20th June 2025</h1>
+    <h2>
+      What are the differences between relative, absolute, and fixed
+      positioning?
+    </h2>
+    <div>
+      <p>
+        The position property in CSS determines where an element is placed on a
+        browser page. Let's explore the relative, absolute, and fixed positions.
+      </p>
+      <ul>
+        <li>
+          <strong>Relative</strong> positions the element in a way that is
+          relative to where it normally is on a page.
+        </li>
+        <li>
+          <strong>Absolute</strong> positions the element relative to it's
+          closest ancestor.
+        </li>
+        <li>
+          <strong>Fixed</strong> positions the element relative to the viewport
+          used to view the content.
+        </li>
+      </ul>
+      <p>Now let's look at examples for each position value.</p>
+    </div>
+    <div>
+      <h3>Relative</h3>
+      <p>
+        Using values like top, right, bottom, and left, you can move an element
+        around the page, relative to it's normal starting position.<br />
+        In the example below, I created a box called "relative-box". The box
+        started in the top left of the page. By using the "left" value, I moved
+        the box 200px <em>from</em> the left of it's normal starting position.
+      </p>
+      <img
+        src="blog-images/relativebox.png"
+        alt="Box in default position"
+      /><img
+        src="blog-images/relativeboxcode.png"
+        alt="CSS code for relative position"
+      />
+      <br />
+      <img
+        src="blog-images/relativebox2.png"
+        alt="Box moved 200px from the left"
+      /><img
+        src="blog-images/relativeboxcode2.png"
+        alt="CSS code for relative position 200px from the left"
+      />
+    </div>
+    <div>
+      <h3>Absolute</h3>
+      <p>
+        The absolute value places an element in relation to it's nearest
+        ancestor, or containing class. If the containing class is moved, then
+        the element with the absolute position value will also move with it.<br />
+        In the example below, I brought back the "relative-box" and created a
+        new blue box within it called "absolute-box". When I moved the
+        "relative-box", the "absolute-box" moved too.
+      </p>
+      <img
+        src="blog-images/absolutebox.png"
+        alt="Box showing another box inside it"
+      /><img
+        src="blog-images/absoluteboxcode.png"
+        alt="CSS code for an absolute position box 
+        inside another box"
+      /><br />
+      <img
+        src="blog-images/absolutebox2.png"
+        alt="Box moved 200px from the left"
+      /><img
+        src="blog-images/absoluteboxcode2.png"
+        alt="CSS code for an absolute position box 
+        inside a box moved 200px from the left"
+      />
+    </div>
+    <div>
+      <h3>Fixed</h3>
+      <p>
+        The fixed value fixes the element in place according to the viewport or
+        web browser. Again by using values like top, right, bottom, and left,
+        you can fix an element in place, scroll up and down the page, and the
+        fixed element will "stick" to the screen. <br />
+        In the example below, I created a box called "fixed-box". I placed some
+        text below it, and as I scrolled down, the box stayed fixed in the top
+        left-hand corner of the screen. First it covered paragraphs 1-3, then it
+        covered paragraphs 4-6.
+      </p>
+      <img
+        src="blog-images/fixedbox.png"
+        alt="Box in a fixed position on the page"
+      /><img
+        src="blog-images/fixedboxcode.png"
+        alt="CSS code for box in a fixed position on the page"
+      />
+      <br />
+      <img
+        src="blog-images/fixedbox2.png"
+        alt="Box in a fixed position on the page with 
+      the page scrolled down"
+      />
+    </div>
+    <div>
+      <p>Now let's look at two additional position values.</p>
+      <ul>
+        <li>
+          <strong>Sticky</strong> positions the element based on the scroll
+          position.
+        </li>
+        <li>
+          <strong>Static</strong> positions the element in the default position
+          for that element.
+        </li>
+      </ul>
+      <p>Let's look at some examples of sticky and strong positions.</p>
+    </div>
+    <div>
+      <h3>Sticky</h3>
+      <p>
+        On the surface, the sticky value is very similar to the fixed value. It
+        "sticks" an element to the scroll bar, meaning that when you scroll on
+        your web browser, the element will move along with your scroll. This
+        differs from the fixed value because the fixed value "sticks" the
+        element to your viewport or web browser screen.<br />
+        In the example below, I created a box called "sticky-box". I placed some
+        text below it and the box didn't cover the text until I scrolled down
+        the page. In the "fixed-box" example, the box covered the text below it
+        regardless of whether I scrolled down the page or not. That is the
+        difference between the fixed and sticky values in action.
+      </p>
+      <img src="blog-images/stickybox.png" alt="Box above some text" /><img
+        src="blog-images/stickyboxcode.png"
+        alt="CSS code for a box with the sticky 
+        position value"
+      /><br />
+      <img
+        src="blog-images/stickybox2.png"
+        alt="Box with the sticky position value in front 
+      of some text"
+      />
+    </div>
+    <div>
+      <h3>Static</h3>
+      <p>
+        The static value is the default position for elements. This value sets
+        the element to it's default position and it cannot be moved. Unlike the
+        rest of the values explored above, the static value is unaffected by the
+        top, right, bottom, and left values.<br />
+        In the example below, I created a box called "static-box". I set the
+        left value to 200px and the top value to 200px, yet the box did not
+        move.
+      </p>
+      <img
+        src="blog-images/staticbox.png"
+        alt="A box in a static position on the page"
+      /><img
+        src="blog-images/staticboxcode.png"
+        alt="CSS code for a box with the static position value"
+      />
+    </div>
+    <footer>KZ25</footer>
+  </body>
+</html>
