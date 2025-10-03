@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>JavaScript Components Demo</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <ul class="nav-bar">
+          <li class="nav-bar">
+            <a href="index.html"><span class="nav-star">&#8902;</span> Home</a>
+          </li>
+          <li class="nav-bar">
+            <a href="about-me.html"
+              ><span class="nav-star">&#8902;</span> About Me</a
+            >
+          </li>
+          <li class="nav-bar">
+            <a href="blogs.html"><span class="nav-star">&#8902;</span> Blogs</a>
+          </li>
+          <li class="nav-bar">
+            <a href="js-demo.html"
+              ><span class="nav-star">&#8902;</span> JS Demo</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <h2>JavaScript Components Demo</h2>
+    </header>
+
+    <div class="fade-in">
+      <h3>Interactive Features Added to Your Site:</h3>
+      <ul>
+        <li>
+          <strong>Navigation Highlighting:</strong> Current page is highlighted
+          in gold
+        </li>
+        <li>
+          <strong>Interactive Stars:</strong> Hover and click the constellation
+          on the homepage
+        </li>
+        <li>
+          <strong>Smooth Scrolling:</strong> Navigation now smoothly scrolls to
+          sections
+        </li>
+        <li>
+          <strong>Reading Progress:</strong> See the progress bar at the top of
+          blog pages
+        </li>
+        <li>
+          <strong>Back to Top:</strong> Scroll down to see the back-to-top
+          button appear
+        </li>
+        <li><strong>Image Zoom:</strong> Click on any image to enlarge it</li>
+      </ul>
+    </div>
+
+    <div class="fade-in">
+      <h3>Click this image to see the zoom feature:</h3>
+      <img
+        src="images/cover2.jpg"
+        alt="Demo image"
+        style="max-width: 300px; border-radius: 8px"
+      />
+    </div>
+
+    <div class="fade-in">
+      <h3>Future Enhancement Ideas:</h3>
+      <ul>
+        <li>Dark/Light theme toggle</li>
+        <li>Search functionality for blog posts</li>
+        <li>Contact form with validation</li>
+        <li>Animated loading screens</li>
+        <li>Blog post sharing buttons</li>
+        <li>Comments system</li>
+        <li>Reading time estimates</li>
+        <li>Tag filtering for blog posts</li>
+      </ul>
+    </div>
+
+    <!-- Add some content to test scrolling -->
+    <div style="height: 1000px">
+      <p>Scroll down to see the back-to-top button appear...</p>
+    </div>
+
+    <footer>KZ25</footer>
+
+    <!-- JavaScript files -->
+    <script src="scripts/main.js"></script>
+    <script>
+      // Initialize fade-in animations on this demo page
+      document.addEventListener('DOMContentLoaded', function () {
+        addFadeInAnimation()
+
+        // Add back to top button for this demo
+        const backToTop = document.createElement('button')
+        backToTop.id = 'back-to-top'
+        backToTop.innerHTML = '↑'
+        backToTop.title = 'Back to top'
+        document.body.appendChild(backToTop)
+
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 300) {
+            backToTop.classList.add('visible')
+          } else {
+            backToTop.classList.remove('visible')
+          }
+        })
+
+        backToTop.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          })
+        })
+
+        // Add image zoom to demo image
+        const demoImg = document.querySelector('img[alt="Demo image"]')
+        if (demoImg) {
+          demoImg.style.cursor = 'pointer'
+          demoImg.addEventListener('click', function () {
+            const overlay = document.createElement('div')
+            overlay.classList.add('image-overlay')
+
+            const enlargedImg = document.createElement('img')
+            enlargedImg.src = this.src
+            enlargedImg.alt = this.alt
+            enlargedImg.classList.add('enlarged-image')
+
+            overlay.appendChild(enlargedImg)
+            document.body.appendChild(overlay)
+
+            overlay.addEventListener('click', function () {
+              document.body.removeChild(overlay)
+            })
+
+            document.addEventListener('keydown', function closeOnEscape(e) {
+              if (e.key === 'Escape') {
+                if (document.body.contains(overlay)) {
+                  document.body.removeChild(overlay)
+                }
+                document.removeEventListener('keydown', closeOnEscape)
+              }
+            })
+          })
+        }
+      })
+    </script>
+  </body>
+</html>
