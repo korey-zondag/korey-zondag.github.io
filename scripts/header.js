@@ -23,7 +23,6 @@ function getPageTitle() {
     'about-me.html': 'About Me',
     'projects.html': 'Projects',
     'blogs.html': 'Blogs',
-    'js-demo.html': 'JavaScript Demo',
   }
 
   // For blog pages, extract title from document title or use default
@@ -83,7 +82,6 @@ function createHeader(customTitle = null) {
           </li>
         </ul>
       </nav>
-      <h2>${pageTitle}</h2>
     </header>
   `
 
