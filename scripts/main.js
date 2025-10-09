@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Navigation functionality
 function initNavigation() {
   // Highlight current page in navigation
-  const currentPage = window.location.pathname.split('/').pop() || 'home.html'
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html'
   const navLinks = document.querySelectorAll('.nav-bar a')
 
   navLinks.forEach((link) => {
@@ -22,7 +22,7 @@ function initNavigation() {
 
     if (
       linkPage === currentPage ||
-      (currentPage === '' && linkPage === 'home.html')
+      (currentPage === '' && linkPage === 'index.html')
     ) {
       link.classList.add('current-page')
     }

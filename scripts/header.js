@@ -16,10 +16,10 @@ function getRelativePath() {
 
 // Function to get page title based on current page
 function getPageTitle() {
-  const currentPage = window.location.pathname.split('/').pop() || 'home.html'
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html'
 
   const pageTitles = {
-    'home.html': "Korey's Web Development Journey",
+    'index.html': "Korey's Web Development Journey",
     'about-me.html': 'About Me',
     'projects.html': 'Projects',
     'blogs.html': 'Blogs',
@@ -36,7 +36,7 @@ function getPageTitle() {
 // Function to get current page for navigation highlighting
 function getCurrentPage() {
   const currentPath = window.location.pathname
-  const currentPage = currentPath.split('/').pop() || 'home.html'
+  const currentPage = currentPath.split('/').pop() || 'index.html'
 
   // Remove file extension for comparison
   return currentPage.replace('.html', '')
@@ -53,8 +53,8 @@ function createHeader(customTitle = null) {
       <nav class="nav-bar">
         <ul class="nav-bar">
           <li class="nav-bar">
-            <a href="${relativePath}home.html" ${
-    currentPage === 'home' ? 'class="current-page"' : ''
+            <a href="${relativePath}index.html" ${
+    currentPage === 'index' ? 'class="current-page"' : ''
   }>
               <span class="nav-star">&#8902;</span> Home
             </a>
